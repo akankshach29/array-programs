@@ -9,7 +9,7 @@
         for(let i = 0; i < NUMBER_ARRAY.length; i++){
             // start from index 0 and keep adding 1 to number in array
             initial = initial + 1;
-            // after adding 1 check if that is equal to the number on next index.
+            // after adding 1 check if that is equal to the number on next index
             if(initial != NUMBER_ARRAY[i]){
                 // if not return that number
                 return initial;
