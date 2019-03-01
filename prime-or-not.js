@@ -12,13 +12,33 @@ function findPrime(N) {
     return 'Prime'
 }
 
-console.log(findPrime(19))
+// console.log(findPrime(3))
 
 
 // finding all prime numbers in an array
 
-// const NUM_ARR = [3, 6, 8, 5, 11, 9];
+const NUM_ARR = [11, 6, 8, 5, 9];
 
-// function findAllPrimes(){
+function findAllPrimes(){
 
-// }
+    function isPrime(testNo) {
+        let result = false;
+        for(let n = testNo - 1; n > 1; n--){
+            result = (testNo % n === 0) + result;
+        }
+    
+        if(result === 0 && testNo > 1){
+            return true;
+          }return false;
+    }
+
+    let result = new Array();
+    for(let j = 0; j < NUM_ARR.length; j++){
+        if(isPrime(NUM_ARR[j])) {
+            result.push(NUM_ARR[j]);
+        }     
+    }
+    return result;
+}
+
+console.log(findAllPrimes())
