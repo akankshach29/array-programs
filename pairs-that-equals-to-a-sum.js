@@ -14,7 +14,7 @@ function sumOfTwo(arr) {
         for(let i = 1; i < arr.length; i++) {
             let temp = arr[j];
             sum = temp + arr[i];
-            console.log(arr[i], '+', temp, '=', sum)
+            // console.log(arr[i], '+', temp, '=', sum)
             if(sum === 5) {
                 result.push([arr[i], temp])
             }
