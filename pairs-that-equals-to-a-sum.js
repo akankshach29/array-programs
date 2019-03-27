@@ -8,15 +8,11 @@ const NUM_ARR = [8, 6, 3, 4, 2, 9, 1];
 // if not, the number in temp changes to the next value in array
 
 function sumOfTwo(arr) {
-    let sum = 0;
     let result = [];
     for(j=0; j< arr.length; j++){
-        for(let i = 1; i < arr.length; i++) {
-            let temp = arr[j];
-            sum = temp + arr[i];
-            // console.log(arr[i], '+', temp, '=', sum)
-            if(sum === 5) {
-                result.push([arr[i], temp])
+        for(let i = 0; i < arr.length; i++) {
+            if(arr[j]+ arr[i+j] === 5) {
+                result.push([arr[j], arr[i+j]])
             }
         }
     }
