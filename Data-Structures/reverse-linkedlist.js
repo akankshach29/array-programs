@@ -10,13 +10,15 @@ function Node(val) {
     })
 }
 
-function reverseList(){
+function createList(){
     let head = new Node(5)
     head.next = new Node(6)
-    head.next.next = new Node(7)
-    console.log('original', head)
+    head.next.next = new Node(5)
+    // console.log('original', head)
+    return reverseList()
+}
 
-        
+function reverseList(){
         let prev = null
         let next = null
     
@@ -30,4 +32,4 @@ function reverseList(){
         return head;
     
 }
-console.log('reversed',reverseList())
+console.log('original',createList())
